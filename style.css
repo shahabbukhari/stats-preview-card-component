@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+.attribution { 
+    font-size: 11px; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+:root {
+    /* PRIMARY */
+    /* (main background): */
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    /* (card background) */
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    /* (accent) */
+    --Soft-violet: hsl(277, 64%, 61%);
+
+    /* Secondary */
+    /* (main heading, stats) */
+    --White: hsl(0, 0%, 100%);
+    /* (main paragraph) */
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (stat headings) */
+    --Slightly-transparent-white : hsla(0, 0%, 100%, 0.6);
+}
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-dark-blue);
+}
+.container {
+    max-width: 75%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Dark-desaturated-blue);
+    color: white;
+    border-radius: 10px;
+}
+.stats {
+    width: 50%;
+    padding: 55px;
+}
+img {
+    height: 100%;
+}
+.image {
+    position: relative;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--Soft-violet);
+    top: 0;
+    opacity: 0.4;
+}
+.stats-details h3{
+    font-size: 35px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+}
+.stats-details span {
+    color: var(--Soft-violet);
+}
+.stats-details p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Slightly-transparent-white);
+    /* width: 80%; */
+    line-height: 1.4rem;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+.stats-numbers {
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+.stat-item span {
+    display: block;
+}
+.stat-item .num-info{
+    text-transform: uppercase;
+    font-size: 10px;
+    color: var(--Slightly-transparent-white);
+}
+.stat-item .num{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1150px) {
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        flex-direction: column-reverse; 
+        height: 90vh;
+    }
+    .stats {
+        flex: 1.5 1.5;
+        padding: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    .image {
+        flex: 1 1;
+    }
+    .stats-details p{
+        margin-bottom: 10px;
+    }
+    .stats-details h3 {
+        font-size: 25px;
+    }
+    .stats-numbers {
+        flex-direction: column;
+    }
+    .stat-item {
+        margin-bottom: 20px;
+    }
+}
